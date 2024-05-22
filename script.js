@@ -14,12 +14,16 @@ function createList(array) {
     return;
   }
   const ul = document.createElement("ul");
-  ul.id = list;
+  ul.id = "list";
   const body = document.querySelector("body");
   body.appendChild(ul);
-  array.map((item) => {
+  const liToAdd = array.map((item) => {
     const li = document.createElement("li");
     li.textContent = item;
     return li;
   });
+  liToAdd.forEach((li) => {
+    ul.appendChild(li);
+  });
+  return ul;
 }
