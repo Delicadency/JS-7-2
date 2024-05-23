@@ -5,6 +5,7 @@ function createList(array) {
   }
   const ul = document.createElement("ul");
   ul.id = "list";
+  ul.textContent = "Lista zakupów";
   const body = document.querySelector("body");
   body.appendChild(ul);
   const liToAdd = array.map((item) => {
